@@ -1,0 +1,61 @@
+{
+  "extends": [
+    "eslint-config-airbnb"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 7,
+    "ecmaFeatures": {
+      "impliedStrict": true,
+      "jsx": true,
+      "experimentalObjectRestSpread": true
+    },
+    "sourceType": "module"
+  },
+  "parser": "babel-eslint",
+  "env": {
+    "node": true,
+    "mocha": true,
+    "es6": true
+  },
+  "globals": {
+    "__DEV__": true,
+    "__PROD__": true,
+    "__SERVER__": true,
+    "__CLIENT__": true
+  },
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import"
+  ],
+  "settings": {
+    "import/parser": "babel-eslint",
+    "import/resolve": {
+      "moduleDirectory": ["node_modules", "src"],
+      "webpack": {
+        "config": "webpack.config.js"
+      }
+    }
+  },
+  "rules": {
+    "react/jsx-filename-extension": 0,
+    "react/forbid-prop-types": ["warn", { "forbid": ["object"] }],
+    "max-len": ["error", 200],
+    "no-underscore-dangle": ["error", { "allow": ["__INITIAL_STATE__"] }],
+    "react/no-unknown-property": [2, { "ignore": ["class"] }],
+    "no-unused-vars": [1, { "varsIgnorePattern": "_", "argsIgnorePattern": "_" }]
+    // "react/jsx-no-bind": 0,
+    // "id-length": 0,
+    // "import/default": 0,
+    // "import/no-duplicates": 0,
+    // "import/named": 0,
+    // "import/namespace": 0,
+    // "import/no-unresolved": 0,
+    // "import/no-named-as-default": 0,
+    // "comma-dangle": 0,  // not sure why airbnb turned this on. gross!
+    // "indent": [2, 2, {"SwitchCase": 0}],
+    // "no-console": 0,
+    // "no-alert": 0,
+    // "camelcase": 0,
+  }
+}

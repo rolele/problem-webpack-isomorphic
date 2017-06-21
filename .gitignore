@@ -1,0 +1,13 @@
+dist
+lib
+node_modules
+.eslintcache
+webpack-assets.json
+webpack-stats.json
+*.log
+**.tern-port
+**.DS_Store
+**.#**
+elasticsearch/py3-env/
+stats/
+py2-env/

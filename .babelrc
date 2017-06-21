@@ -1,0 +1,17 @@
+{
+  "presets": ["react", "es2015", "stage-0"],
+  "plugins": ["react-hot-loader/babel", "transform-runtime",
+    ["module-resolver", {
+      "root": ["./src"],
+      "alias": {
+        "theme": "theme",
+        "public": "public",
+        "modules": "modules",
+        "middlewares": "middlewares",
+        "helpers": "helpers",
+        "interfaces": "interfaces",
+        "resources": "resources"
+      }
+    }]
+  ]
+}
