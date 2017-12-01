@@ -94,8 +94,8 @@ if (__DEV__) {
         use: [{
           loader: 'babel-loader',
           options: {
-            presets: ['react', ['es2015', { modules: false }], 'stage-0'],
-            plugins: ['react-hot-loader/babel']
+            presets: ['react', 'es2015', 'stage-0'],
+            plugins: ['react-hot-loader/babel', 'transform-runtime']
           }
         }
           /* , {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { routePropTypes, routeDefaultProps } from 'helpers'; // eslint-disable-line
 import { PureBlog } from 'modules'; // eslint-disable-line
-import s from 'theme';
+import s from '../../theme';
 
 /* eslint-disable */
 class EmptyWrapper extends Component { // eslint-disable-line

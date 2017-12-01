@@ -29,18 +29,18 @@ export default app => {
   // here just server.js and api.js
   // Throw away cached modules and re-require next time
   // Ensure there's no important state in there!
-  const chokidar = require('chokidar');
-  const watcher = chokidar.watch('./src');
-  watcher.on('ready', function () {
-    watcher.on('all', function () {
-      Object.keys(require.cache).forEach(function (id) {
-        if (/wishlist-client[\/\\]src[\/\\]server/.test(id) ||
-           /wishlist-client[\/\\]src[\/\\]api/.test(id)) {
-          console.log("clear :"+ id);
-          delete require.cache[id];
-        }
-      });
-      webpackTools.refresh()
-    });
-  });
+  /* const chokidar = require('chokidar');
+   * const watcher = chokidar.watch('./src');
+   * watcher.on('ready', function () {
+   *   watcher.on('all', function () {
+   *     Object.keys(require.cache).forEach(function (id) {
+   *       if (/wishlist-client[\/\\]src[\/\\]server/.test(id) ||
+   *          /wishlist-client[\/\\]src[\/\\]api/.test(id)) {
+   *         console.log("clear :"+ id);
+   *         delete require.cache[id];
+   *       }
+   *     });
+   *     webpackTools.refresh()
+   *   });
+   * });*/
 };
